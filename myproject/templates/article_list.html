@@ -1,0 +1,11 @@
+<nav>
+    <a href="{% url 'article_new' %}">+ new article</a>
+</nav>
+{% for article in article_list %}
+
+<div>
+    <h2>
+        <a href="{{ article.get_absolute_url }}">{{article}}</a>
+    </h2>
+</div>
+{% endfor %}
